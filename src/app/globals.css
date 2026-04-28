@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1B2A4A;
+  --purple: #7C3AED;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background-color: #F4F6F9;
+  color: #1B2A4A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F6F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Kanban column scroll */
+.kanban-column-scroll {
+  overflow-y: auto;
+  max-height: calc(100vh - 280px);
+}
+
+/* Drag overlay card styles */
+.drag-overlay-card {
+  cursor: grabbing !important;
+  transform: rotate(2deg);
+  box-shadow: 0 20px 40px -8px rgba(27, 42, 74, 0.3) !important;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #7C3AED;
+  outline-offset: 2px;
+}
